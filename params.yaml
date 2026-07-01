@@ -1,0 +1,21 @@
+data:
+  n_samples: 1500
+  random_state: 42
+  output_path: data/raw/open_rate_data.csv
+
+split:
+  test_size: 0.2
+  random_state: 42
+  train_path: data/processed/train.csv
+  test_path: data/processed/test.csv
+
+model:
+  type: logistic_regression
+  random_state: 42
+  n_estimators: 120
+  max_depth: 8
+
+mlflow:
+  experiment_name: open_rate_classification
+  tracking_uri: sqlite:///mlflow.db
+  
