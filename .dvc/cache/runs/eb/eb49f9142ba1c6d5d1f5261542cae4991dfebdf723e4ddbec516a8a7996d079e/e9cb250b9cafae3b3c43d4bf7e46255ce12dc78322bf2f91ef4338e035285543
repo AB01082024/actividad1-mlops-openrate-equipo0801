@@ -1,0 +1,23 @@
+cmd: poetry run python src/prepare_data.py --params params.yaml
+deps:
+- path: data/raw/open_rate_data.csv
+  hash: md5
+  md5: 3f8490821a959cf13a3012576635b7a0
+  size: 70394
+- path: params.yaml
+  hash: md5
+  md5: 0f15f3d61453dbdab646204bb5023cb0
+  size: 407
+- path: src/prepare_data.py
+  hash: md5
+  md5: 89d292b4c109e88db57001e5e72a4826
+  size: 1038
+outs:
+- path: data/processed/test.csv
+  hash: md5
+  md5: 59471403b78fcf5e60bd1fcea38f65fd
+  size: 14237
+- path: data/processed/train.csv
+  hash: md5
+  md5: c28ec1f6e717dc167afba03af8c70569
+  size: 56305

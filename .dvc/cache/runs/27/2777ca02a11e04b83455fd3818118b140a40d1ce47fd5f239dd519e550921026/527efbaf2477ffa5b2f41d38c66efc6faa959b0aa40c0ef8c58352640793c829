@@ -1,0 +1,23 @@
+cmd: poetry run python src/train.py --params params.yaml
+deps:
+- path: data/processed/test.csv
+  hash: md5
+  md5: 59471403b78fcf5e60bd1fcea38f65fd
+  size: 14237
+- path: data/processed/train.csv
+  hash: md5
+  md5: c28ec1f6e717dc167afba03af8c70569
+  size: 56305
+- path: params.yaml
+  hash: md5
+  md5: 0f15f3d61453dbdab646204bb5023cb0
+  size: 407
+- path: src/train.py
+  hash: md5
+  md5: e0311fc9c88cc41a74ac0ecee8df19d9
+  size: 2068
+outs:
+- path: models/logistic_regression_model.joblib
+  hash: md5
+  md5: 057ee635d7199eb244f7a133bd30afee
+  size: 1247

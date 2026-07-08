@@ -1,0 +1,15 @@
+cmd: poetry run python src/generate_data.py --params params.yaml
+deps:
+- path: params.yaml
+  hash: md5
+  md5: 0f15f3d61453dbdab646204bb5023cb0
+  size: 407
+- path: src/generate_data.py
+  hash: md5
+  md5: 6ad2d64bd11f6d1e52b4465faa956f67
+  size: 1532
+outs:
+- path: data/raw/open_rate_data.csv
+  hash: md5
+  md5: 3f8490821a959cf13a3012576635b7a0
+  size: 70394
