@@ -50,4 +50,6 @@ Abrir en el navegador: http://127.0.0.1:5000
 | Modelo | Accuracy | F1 | AUC |
 |---|---|---|---|
 | Logistic Regression | 0.93 | 0.78 | 0.85 |
-| Random Forest | Por ejecutar | Por ejecutar | Por ejecutar |
+| Random Forest | 1.00 | 1.00 | 1.00 |
+
+> **Nota sobre las métricas del Random Forest:** El modelo de Random Forest alcanza un rendimiento perfecto (Accuracy, F1 y AUC = 1.00) porque la variable objetivo (`target_opened`) en los datos sintéticos se genera mediante una regla determinística y sin ruido a partir de dos de las mismas variables usadas como features (`historical_open_rate` y `days_since_last_open`). Al ser una relación exacta y sin aleatoriedad, un modelo basado en árboles logra separar perfectamente las clases. Esto es un efecto propio de la naturaleza sintética del dataset, no un error de fuga de datos (data leakage) en la evaluación, ya que las métricas se calculan correctamente sobre el conjunto de test.
